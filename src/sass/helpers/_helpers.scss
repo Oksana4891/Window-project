@@ -1,0 +1,134 @@
+%background {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+%bold-text-style {
+  font-weight: 700;
+  font-style: normal;
+  color: $dark-text-color;
+}
+
+/* For h2 title*/
+%sec-title-style {
+  position: relative;
+  font-size: 2rem;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #333333;
+  @media screen and (min-width: 576px) {
+    font-size: 2.8rem;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    margin-top: 2rem;
+    width: 17rem;
+    height: 2rem;
+    transform: translateX(-50%);
+    background: url(../images/glazing/line.png) 0 0 no-repeat;
+    left: 50%;
+  }
+}
+
+/* For h3 title and main menu*/
+%title-text-style {
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* For p */
+%text-style {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Main bottom*/
+.main_btn {
+  text-transform: uppercase;
+  padding: 1.7rem 0rem;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  border: 1px solid #ffc600;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #ffed26 0%, #ffb400 100%);
+  box-shadow: 1px 2px 20px 0px rgba(255, 153, 0, 0.4);
+  @media screen and (min-width: 576px) {
+    padding: 2.5rem 0rem;
+    font-size: 1.7rem;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
+
+// *Slider*//
+
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  .slider_list {
+    transition: transform 0.4s ease;
+  }
+
+  .slider_item {
+    width: 100%;
+    flex: none;
+    @media screen and (min-width: 576px) {
+      width: 50%;
+    }
+    @media screen and (min-width: 767px) {
+      width: 33.33%;
+    }
+    @media screen and (min-width: 992px) {
+      width: 25%;
+    }
+    @media screen and (min-width: 1200px) {
+      width: auto;
+    }
+  }
+
+  .slider_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+  }
+
+  .btn-next {
+    right: 0;
+    background: url(../images/glazing/right_arrow.png) center no-repeat;
+    background-size: 70%;
+  }
+
+  .btn-prev {
+    left: 0;
+    background: url(../images/glazing/left_arrow.png) center no-repeat;
+    background-size: 70%;
+  }
+}
+

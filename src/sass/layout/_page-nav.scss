@@ -1,0 +1,128 @@
+.menu {
+  background-color: $main-style-color;
+  margin-top: 20px;
+  position: relative;
+
+  .menu_icon {
+    display: flex;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+
+    .menu_icon--title {
+      margin-left: 20px;
+      padding-top: 10px;
+      @extend %title-text-style;
+      color: #333333;
+      line-height: 1.4;
+    }
+  }
+
+  .burger {
+    display: block;
+    width: 50px;
+    padding: 20px;
+  }
+
+  .burger-line {
+    z-index: 109;
+    position: relative;
+    width: 30px;
+    height: 5px;
+    cursor: pointer;
+    background-color: #333333;
+  }
+
+  .burger-line::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #333333;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+
+  .burger-line::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #333333;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+
+  .burger.burger_active .burger-line {
+    background-color: transparent;
+  }
+
+  .burger.burger_active .burger-line::before {
+    transform: rotate(45deg);
+    top: 0px;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  .burger.burger_active .burger-line::after {
+    transform: rotate(-45deg);
+    top: 0px;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+
+  .nav_list-block {
+    display: block;
+
+    .nav_list {
+      @extend %title-text-style;
+      list-style: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav_list {
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        left: -70%;
+        width: 70%;
+        padding: 20px;
+        background-color: $main-style-color;
+        transition: left 0.4s ease-in;
+      }
+
+      .nav_item {
+        padding-left: 20px;
+        padding-bottom: 20px;
+      }
+
+      .nav_item:first-child {
+        padding-top: 50px;
+      }
+
+      .nav_list.nav_list--active {
+        left: 0;
+      }
+    }
+
+    .nav_link {
+      color: $addition-text-color;
+      transition: color 0.4s linear;
+    }
+
+    .nav_link:hover {
+      color: $hover-style-color;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      .nav_list {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

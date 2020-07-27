@@ -1,0 +1,58 @@
+.banner {
+  background: #ffffff url(../images/main/bg.png) 0 0 no-repeat;
+  background-size: cover;
+  padding: 7rem 0;
+  @media screen and (min-width: 1200px){
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 700;
+    font-style: normal;
+    color: #333333;
+    @media screen and (min-width: 530px) {
+      font-size: 5rem;
+    }
+    @media screen and (min-width: 992px) {
+      font-size: 5.5rem;
+      text-align: left;
+    }
+    span {
+      font-size: 1.5rem;
+      @media screen and (min-width: 530px) {
+        font-size: 2.6rem;
+      }
+    }
+  }
+
+  .about-us_block {
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+    @media screen and (min-width: 992px) {
+      margin-top: 13rem;
+      margin-bottom: 0rem;
+    }
+  }
+
+  .about-us_list {
+    position: relative;
+    margin-bottom: 4rem;
+  }
+
+  .about-us_list--icon {
+    margin: 0 auto;
+  }
+
+  .about-us_list--text {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    margin-left: -14px;
+    @extend %text-style;
+  } 
+}
+
+  

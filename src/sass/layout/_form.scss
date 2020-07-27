@@ -1,0 +1,57 @@
+.main_form {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #ffffff;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 3rem;
+  }
+
+  .form_title {
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #333333;
+    line-height: 1.5;
+    @media screen and (min-width: 576px) {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 2rem;
+      text-transform: uppercase;
+      @media screen and (min-width: 576px) {
+        font-size: 2.4rem;
+      }
+    }
+  }
+
+  .form_input {
+    height: 5.8rem;
+    padding: 2rem 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-radius: 1rem;
+  }
+
+  .form_input::placeholder {
+    color: #999;
+    opacity: 1;
+    font-size: 1.5rem;
+  }
+
+  .form_input:focus {
+    color: transparent;
+  }
+
+  .form_notice {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #666;
+  }
+}

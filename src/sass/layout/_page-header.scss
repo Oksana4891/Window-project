@@ -1,0 +1,105 @@
+.header {
+  padding-top: 20px;
+}
+
+.logo {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo_icon {
+    margin-right: 2rem;
+
+    img {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  .logo_text {
+    font-size: 1rem;
+    line-height: 1.2;
+    color: $main-style-color;
+    @media screen and (min-width: 768px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.header_btn--wrap {
+  .header_btn {
+    background: $addition-text-color url(../images/header/edit.png) 1rem center
+      no-repeat;
+    padding: 10px 10px 10px 50px;
+    border: 2px solid $addition-style-color;
+    border-radius: 1rem;
+    background-color: $addition-text-color;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    color: $addition-style-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 1.4rem;
+    }
+  }
+  @media (max-width: 767px) {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+    height: auto;
+    text-align: center;
+  }
+}
+
+.header_work-time--text {
+  background: url(../images/header/clock.png) 1rem center no-repeat;
+  padding-left: 50px;
+
+  span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    @media screen and (min-width: 1200px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  .header_work-time--text {
+    font-size: 1.2rem;
+    @media screen and (min-width: 1200px) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.contact-us {
+  .contact-us_tel {
+    background: url(../images/header/phone.png) 1rem center no-repeat;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    @extend %bold-text-style;
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    @media screen and (min-width: 992px) {
+      font-size: 1.8rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2.1rem;
+    }
+  }
+
+  .contact-us__link {
+    display: block;
+    font-size: 1.1rem;
+    color: $main-style-color;
+    text-decoration: underline;
+    @media screen and (min-width: 992px) {
+      font-size: 1.5rem;
+    }
+  }
+}

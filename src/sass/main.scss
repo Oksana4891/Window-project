@@ -1,0 +1,27 @@
+
+
+/* Helpers */
+// @import './base/fonts';
+@import './helpers/variables';
+// @import './helpers/functions';
+// @import './helpers/mixins';
+@import './helpers/helpers'; // Class & placeholders
+
+/* Base */
+@import './base/normalize';
+@import './base/base'; // base style for elements
+
+/* Components */
+// @import './components/list-style/list-style';
+// @import './components/title-style/title-style';
+// @import './components/page-footer/advertising';
+// @import './components/page-footer/social-list';
+// @import './components/page-footer/main-contacts__button';
+
+
+/* Layout */
+@import './layout/page-header';
+@import './layout/page-nav';
+@import './layout/banner';
+@import './layout/form';
+@import './layout/glazing';
