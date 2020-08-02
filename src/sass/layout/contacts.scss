@@ -1,0 +1,28 @@
+.contacts  {
+  margin-bottom: 40px;
+}
+
+.map {
+  width: 100%;
+}
+
+.contacts_title {
+  @extend %sec-title-style;
+  margin: 4rem 0;
+  @media screen and (min-width: 576px) {
+    margin: 5rem 0 8rem;
+  }
+}
+
+.contacts_info--title {
+  @extend %titleFourth--text-style;
+  color: $main-style-color;
+}
+
+.contacts_info--description {
+  @extend %titleFourth--text-style;
+  color: black;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+
+}

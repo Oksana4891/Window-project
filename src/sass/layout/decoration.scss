@@ -1,0 +1,110 @@
+.decoration {
+  padding-top: 3rem;
+  background-color: #f7f7f7;
+  @media screen and (min-width: 576px) {
+    padding-top: 8rem;
+  }
+
+  .decoration_title {
+    @extend %sec-title-style;
+    margin-bottom: 4rem;
+    @media screen and (min-width: 576px) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  .decoration_item {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .decoration_item--link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    text-transform: uppercase;
+    border-bottom: 1px dotted #000000;
+    @media screen and (min-width: 992px) {
+      font-size: 1.8rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2rem;
+    }
+  }
+
+  .decoration_item--link:hover {
+    cursor: pointer;
+  }
+
+  .decoration_item--link.active {
+    text-decoration: none;
+    color: #0089cd;
+    border-top: 1rem solid #0089cd;
+    border-bottom: none;
+    height: 8rem;
+    padding: 2rem 1rem;
+    background: linear-gradient(
+      180deg,
+      #ebebeb 0%,
+      #ebebeb 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .decoration_content {
+    padding-top: 30px;
+
+    .decoration_img {
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    .decoration_material {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @media screen and (min-width: 992px) {
+        justify-content: start;
+        padding-top: 20px;
+      }
+
+      .decoration_material--item {
+        text-align: center;
+        width: 50%;
+        padding: 15px;
+
+        @media screen and (min-width: 992px) {
+          width: 33.33%;
+          padding: 5px;
+        }
+      }
+
+      img {
+        margin: 0 auto;
+      }
+
+      h4 {
+        @extend %titleFourth--text-style;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        @extend %text-style;
+        color: $main-style-color;
+
+        span {
+          display: block;
+          font-size: 1.2rem;
+          font-family: 'Open Sans', sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color: #000000;
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+}

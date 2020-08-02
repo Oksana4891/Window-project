@@ -6,15 +6,11 @@
 
   .glazing_title {
     @extend %sec-title-style;
-    text-align: center;
     margin-bottom: 3rem;
   }
 
   .glazing_list {
     padding: 100px 0 0 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
   }
 
   .glazing_item {
@@ -34,8 +30,8 @@
     }
 
     .glazing_item--contents.active {
-        color: #23527c;
-        text-shadow: 0.2px 0.2px 0.5px $main-style-color;
+      color: #23527c;
+      text-shadow: 0.2px 0.2px 0.5px $main-style-color;
     }
   }
 
@@ -103,14 +99,19 @@
 
     .glazing_price {
       margin-top: 2.5rem;
-      display: flex;
-      justify-content: space-around;
+      @media screen and (min-width: 576px) {
+        display: flex;
+        justify-content: space-around;
+      }
 
       p {
-        text-align: left;
+        text-align: center;
         font-size: 2rem;
         line-height: 1.7;
         font-weight: 700;
+        @media screen and (min-width: 576px) {
+          text-align: left;
+        }
 
         span {
           font-size: 1.4rem;

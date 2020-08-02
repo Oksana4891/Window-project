@@ -1,0 +1,43 @@
+.works {
+  padding-top: 3rem;
+  @media screen and (min-width: 576px) {
+    padding-top: 8rem;
+  }
+
+  .works_title {
+    @extend %sec-title-style;
+    margin-bottom: 4rem;
+    @media screen and (min-width: 576px) {
+      margin-bottom: 8rem;
+    }
+  }
+}
+
+.gallery {
+  position: relative;  
+  list-style: none;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .gallery__item {
+    padding: 10px;
+    width: 50%;
+
+    @media (min-width: 992px) {
+      width: 25%;
+    }
+  }
+
+  .gallery__image {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .gallery__link:hover {
+    cursor: zoom-in;
+  }
+}

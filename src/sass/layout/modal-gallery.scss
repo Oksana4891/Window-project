@@ -1,0 +1,80 @@
+/*Modals*/
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.is-open {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.modal_overlay {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 15px 15px rgba(51, 51, 51, 0.5);
+  margin: 30px 15px;
+
+ 
+}
+.modal_img {
+  padding: 1.5rem;
+}
+
+.modal_button-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+  border: 2px solid white;
+  box-shadow: 3px 3px 3px 3px rgba(51, 51, 51, 1);
+  border-radius: 50%;
+  background-color:  rgba(0, 0, 0, 0.8);;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+  outline: none;
+  background-image: url('../images/our_works/icon-close.svg');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.modal_button-close:hover {
+  background-color: black;
+ 
+}
+
+.modal_button {
+  margin: 10px;
+  width: 60px;
+  height: 30px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal_button:hover {
+    box-shadow: 0px 0px 4px 4px rgba(51, 51, 51, 0.2);
+}
+
+
+.modal_button-right {
+  background-image: url(../images/our_works/right.svg);
+}
+
+.modal_button-left {
+  background-image: url(../images/our_works/left.svg);
+}

@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 // ------BURGER ICON-----------
 
 const burger = document.querySelector('#burger');
@@ -104,8 +103,8 @@ function tab(headerTabs, tabSelector, contentSelector) {
 }
 
 slides('.glazing_item', ".glazing_list", '#glazing_btn-prev', '#glazing_btn-next');
+slides(".decoration_item", ".decoration_list", "#decoration_btn-prev", "#decoration_btn-next");
 tab(".glazing_list", ".glazing_item--contents", ".glazing_content");
-
-
+tab(".decoration_list", ".decoration_item--link", ".decoration_content");
 
 
