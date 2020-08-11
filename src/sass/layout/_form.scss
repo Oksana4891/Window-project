@@ -31,11 +31,13 @@
   }
 
   .form_input {
+    color: #555;
     height: 5.8rem;
     padding: 2rem 3rem;
     margin-bottom: 2rem;
     text-align: center;
     border-radius: 1rem;
+    font-size: 14px;
   }
 
   .form_input::placeholder {
@@ -45,12 +47,11 @@
   }
 
   .form_input:focus {
-    color: transparent;
+    color: inherit;
   }
 
   .form_notice {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    padding-top: 1rem;
     font-size: 1rem;
     color: #666;
   }

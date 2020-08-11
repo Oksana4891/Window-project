@@ -1,24 +1,10 @@
-
-
 /* Helpers */
-// @import './base/fonts';
 @import './helpers/variables';
-// @import './helpers/functions';
-// @import './helpers/mixins';
-@import './helpers/helpers'; // Class & placeholders
-
+@import './helpers/helpers'; 
 /* Base */
 @import './base/normalize';
-@import './base/base'; // base style for elements
-
-/* Components */
-// @import './components/list-style/list-style';
-// @import './components/title-style/title-style';
-// @import './components/page-footer/advertising';
-// @import './components/page-footer/social-list';
-// @import './components/page-footer/main-contacts__button';
-
-
+@import './base/base';
+@import './base/animation';
 /* Layout */
 @import './layout/page-header';
 @import './layout/page-nav';
@@ -27,7 +13,9 @@
 @import './layout/glazing';
 @import './layout/decoration';
 @import './layout/page_ourWork';
-@import './layout/modal-gallery.scss';
+@import './layout/page_bigOurWork.scss';
 @import './layout/contacts.scss';
 @import './layout/footer.scss';
+@import './layout/PopUp.scss';
+@import './layout/PopUpCalc.scss';
 

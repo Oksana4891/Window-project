@@ -83,11 +83,10 @@ function createGallery(galleryListSelector, modalSelector, bigImageSelector, clo
 
   function handleOpenModal(event) {
     event.preventDefault();
-    if (event.currentTarget === event.target) {
-      return;
-    } else {
+    if (event.target.matches('img')) {
       imgModal.classList.add('is-open');
       imgModal.classList.add('faded');
+      document.body.style.overflow="hidden";
       bigImage.alt = event.target.alt;
       bigImage.src = event.target.dataset.source;
       window.addEventListener('keydown', handleCloseModal);
@@ -96,14 +95,16 @@ function createGallery(galleryListSelector, modalSelector, bigImageSelector, clo
       window.addEventListener('keydown', handleScrollImg);
       rightButton.addEventListener('click', handleScrollImg);
       leftButton.addEventListener('click', handleScrollImg);
-
+    } else {
+      return;
     }
   }
 
   function handleCloseModal(event) {
     if (event.target === event.currentTarget || event.code === 'Escape') {
       imgModal.classList.remove('is-open');
-      imgModal.classList.remove('faded');npm
+      imgModal.classList.remove('faded');
+      document.body.style.overflow="visible";
       bigImage.alt = '';
       bigImage.src = '';
       window.removeEventListener('keydown', handleCloseModal);
@@ -112,10 +113,10 @@ function createGallery(galleryListSelector, modalSelector, bigImageSelector, clo
   }
 
   function handleScrollImg(event) {
-    let indexImg;
+    let indexImg; 
     gallery.forEach((elem, i) => {
       if (elem.description == bigImage.alt) {
-        indexImg = i;
+        indexImg = i;  
       }
     });
     if (event.code === 'ArrowRight' || event.target === rightButton) {
@@ -123,7 +124,8 @@ function createGallery(galleryListSelector, modalSelector, bigImageSelector, clo
         return;
       }
       bigImage.alt = gallery[indexImg + 1].description;
-      bigImage.src = gallery[indexImg + 1].original;
+      bigImage.src = gallery[indexImg + 1].original;   
+
     }
     if (event.code === 'ArrowLeft' || event.target === leftButton) {
       if (indexImg === 0) {
@@ -133,6 +135,7 @@ function createGallery(galleryListSelector, modalSelector, bigImageSelector, clo
       bigImage.src = gallery[indexImg - 1].original;
     }
   }
+
 }
 
 createGallery('.js-gallery', '.js-works_modal', '.js-modal_img', '.modal_button-close', '.modal_button-right', '.modal_button-left');

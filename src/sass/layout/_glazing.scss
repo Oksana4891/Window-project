@@ -29,7 +29,7 @@
       color: $main-style-color;
     }
 
-    .glazing_item--contents.active {
+    .glazing_item.active a {
       color: #23527c;
       text-shadow: 0.2px 0.2px 0.5px $main-style-color;
     }

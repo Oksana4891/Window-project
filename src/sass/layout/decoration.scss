@@ -37,7 +37,7 @@
     cursor: pointer;
   }
 
-  .decoration_item--link.active {
+  .decoration_item.active .decoration_item--link{
     text-decoration: none;
     color: #0089cd;
     border-top: 1rem solid #0089cd;

@@ -1,0 +1,45 @@
+.faded {
+  animation-name: faded;
+  animation-duration: 0.8s;
+}
+
+@keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation-name: fadedOut;
+  animation-duration: 0.8s;
+}
+
+@keyframes fadedOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  animation-name: zoomOut;
+  animation-duration: 3s;
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}

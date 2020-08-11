@@ -54,7 +54,8 @@ h3,
 h4,
 h5,
 h6,
-ul {
+ul,
+p {
   margin: 0;
   padding: 0;
 }
@@ -63,5 +64,25 @@ ul {
   display: none;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
 
+.status {
+  display: block;
+  color: red;
+}
 
+.faded {
+  animation-name: faded;
+  animation-duration: 1.5s;
+}
+
+@keyframes faded {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
