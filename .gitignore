@@ -9,7 +9,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # build artifacts
-build/
 
 # Runtime data
 pids
@@ -41,6 +40,8 @@ bower_components
 # Dependency directories
 node_modules/
 jspm_packages/
+gulp/
+
 
 # Typescript v1 declaration files
 typings/

@@ -1,11 +1,11 @@
 <!-- Calculator -->
 <div class="popup popup_calc js-popup_calc">
   <!--Calculator -1 Strep  -->
-  <div class="popup_overlay">
+  <div class="popup_overlay" >
     <button type="button" class="popup_close js-popup_calc-close">
       <strong></strong>&times;</strong>
     </button>
-    <div class="main_form ">
+    <div class="main_form popup_calc_form">
     <h2>Калькулятор</h2>
     <h3>Выберите форму балкона <br />и укажите размеры</h3>
     <div class="balcon_icons popup_tabs--menu">
@@ -26,8 +26,8 @@
       /></span>
     </div>
  
-      <img  class="big_img popup_tabs--content" src="images/modal_calc/balkon/type1.png" alt="Тип1" />
-      <img class="big_img popup_tabs--content" src="images/modal_calc/balkon/type2.png" alt="Тип2"  />
+      <img  class="big_img popup_tabs--content" src="images/modal_calc/balkon/type1.png" alt="Тип1"  />
+      <img class="big_img popup_tabs--content" src="images/modal_calc/balkon/type2.png" alt="Тип2" />
       <img class="big_img popup_tabs--content" src="images/modal_calc/balkon/type3.png" alt="Тип3"  />
       <img class="big_img popup_tabs--content"  src="images/modal_calc/balkon/type4.png" alt="Тип4" />
 
@@ -50,21 +50,21 @@
     />
     <label for="height">мм</label>
     </div>
-    <button class="main_btn popup_calc--next js-popup_calc_next">Далее</button>
+    <button class="main_btn popup_calc--next js-popup_calc-next">Далее</button>
   </div>
   </div>
 </div>
 
   <!--Calculator -2 Strep  -->
   <div class="popup popup_calc js-popup_calc--second">
-  <div class="popup_overlay  popup_calc_form">
+  <div class="popup_overlay ">
     <button type="button" class="popup_close js-popup_calc-close--second">
       <strong></strong>&times;</strong>
     </button>
-    <div class="main_form">
+    <div class="main_form popup_calc_form">
     <h2>Калькулятор</h2>
     <h3>Выберите тип остекления <br />и его профиль</h3>
-    <div class="popup_calc_profile_content">
+    <div class="popup-calc_profile--content">
     <select class="form-control" name="view" id="view_type">
       <option value="tree">Деревянное остекление</option>
       <option value="aluminum">Алюминиевое остекление</option>
@@ -73,28 +73,34 @@
       <option value="overhang">Остекление с выносом</option>
     </select>
     <img src="images/modal_calc/icon_cold.png" alt="" />
+   <div class="radio-box">
     <label>
-      <input class="checkbox" type="checkbox" name="checkbox-test" />
+      <input class="checkbox" type="radio" name="check" value="cold" />
       <span class="checkbox-custom" id="cold"></span>
       <span class="label">Холодное</span>
     </label>
     <img src="images/modal_calc/icon_warm.png" alt="" />
     <label>
-      <input class="checkbox" type="checkbox" name="checkbox-test" />
+      <input class="checkbox" type="radio" name= "check" value="warm" />
       <span class="checkbox-custom" id="warm"></span>
       <span class="label">Теплое</span>
     </label>
     </div>
-    <button class="main_btn popup_calc--next">Далее</button>
+    </div>
+    <button class="main_btn popup_calc--next js-popup_calc-next--second">Далее</button>
     </div>
   </div>
   </div>
 
 
   <!-- Calculator -3 Step -->
-<div class="popup popup_calc js-popup_calc--end">
-    <form class="main_form popup_calc--form" action="#">
-      <h2>Спасибо за обращение! <br />Оставьте свои данные</h2>
+  <div class="popup popup_calc js-popup_calc--end">
+    <div class="popup_overlay ">
+      <button type="button" class="popup_close js-popup_calc-close--end">
+        <strong></strong>&times;</strong>
+      </button>
+    <form class="main_form popup_form popup_form--calc" action="#">
+      <h2 class="form_title">Спасибо за обращение! <br />Оставьте свои данные</h2>
       <input
         class="form_input form-control"
         name="user_name"
@@ -106,7 +112,7 @@
         class="form_input form-control"
         name="user_phone"
         required
-        type="text"
+        type="number"
         placeholder="Введите телефон"
       />
       <button class="main_btn" name="submit" type="submit">
@@ -114,4 +120,5 @@
       </button>
       <p class="form_notice">Перезвоним в течение 10 минут</p>
     </form>
+</div>
 </div>

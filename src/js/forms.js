@@ -17,14 +17,18 @@ function form  ()  {
     forms.forEach(item => {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
-            console.log(item);
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
             item.appendChild(statusMessage);
-
             document.querySelector('.status').textContent = message.loading;
 
             const formData = new FormData(item);
+
+            if(item.classList.contains("popup_form--calc")) {
+                for (let key in modalDate)  {
+                    formData.append(key, modalDate[key]);
+                }
+            }
 
             const object = {};
             formData.forEach(function(value, key){
@@ -42,6 +46,7 @@ function form  ()  {
             }).catch(() => {
                 statusMessage.textContent = message.failure;
             }).finally(() => {
+                    console.log(object);
                     clearInputs();
                     setTimeout(() => {
                         statusMessage.remove();

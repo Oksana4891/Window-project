@@ -5,8 +5,6 @@ function bindModal(triggerSelector, modalSelector, closeSelector, closeClickOver
         close = document.querySelector(closeSelector),
         modals=document.querySelectorAll('.popup');
 
-
-    //   scroll = calcScroll();
     triggers.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
@@ -52,5 +50,6 @@ function bindModal(triggerSelector, modalSelector, closeSelector, closeClickOver
 bindModal(".js_contactUs", ".js_popup-call", ".js_popup-call--close");
 bindModal(".js_callEngineer", ".js_popup-engineer", ".js_popup-engineer_close");
 bindModal(".glazing_price_btn", ".js-popup_calc", ".js-popup_calc-close");
-bindModal(".js-popup_calc_next", ".js-popup_calc--second", ".js-popup_calc-close--second", false);
+bindModal(".js-popup_calc-next", ".js-popup_calc--second", ".js-popup_calc-close--second", false);
+bindModal(".js-popup_calc-next--second", ".js-popup_calc--end", ".js-popup_calc-close--end", false);
 
