@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   opacity: 0;
   pointer-events: none;
@@ -21,14 +21,21 @@
 
 .modal_overlay {
   position: relative;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 90%;
+  max-height: 95%;
 }
 
 .modal_img {
-  max-height: 80vh;
   border: 2px solid white;
   opacity: 1;
-  margin: 10px;
 }
+
 
 .modal_button-close {
   position: absolute;
@@ -38,10 +45,10 @@
   height: 20px;
   padding: 0;
   margin: 0;
-  border: 2px solid white;
-  box-shadow: 3px 3px 3px 3px rgba(51, 51, 51, 1);
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px 2px rgba(51, 51, 51, 1);
   border-radius: 50%;
-  background-color:  rgba(0, 0, 0, 0.8);;
+  background-color: rgba(0, 0, 0, 0.8);
   cursor: pointer;
   transition: background-color 200ms ease-in-out;
   outline: none;
@@ -53,29 +60,33 @@
 
 .modal_button-close:hover {
   background-color: black;
- 
+
 }
 
 .modal_button {
-  margin: 10px;
-  width: 60px;
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  width: 40px;
   height: 30px;
   border: none;
   background-color: white;
+  opacity: 0.8;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .modal_button:hover {
-    box-shadow: 0px 0px 4px 4px rgba(51, 51, 51, 0.2);
-    background-color: rgb(214, 208, 208);
+  background-color: rgb(214, 208, 208);
 }
 
 
 .modal_button-right {
+  right: 5%;
   background-image: url(../images/our_works/right.svg);
 }
 
 .modal_button-left {
+  left: 5%;
   background-image: url(../images/our_works/left.svg);
 }
